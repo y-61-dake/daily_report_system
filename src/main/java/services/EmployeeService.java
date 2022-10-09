@@ -17,7 +17,7 @@ import utils.EncryptUtil;
  *
  */
 
-public class EmployeeService  extends ServiceBase {
+public class EmployeeService extends ServiceBase {
 
     /**
      * 指定されたページ数の一覧画面に表示するデータを取得し，EmployeeViewのリストで返却する
@@ -60,6 +60,7 @@ public class EmployeeService  extends ServiceBase {
             // 社員番号とハッシュ化済パスワードを条件に未削除の従業員を１件取得する
             e = em.createNamedQuery(JpaConst.Q_EMP_GET_BY_CODE_AND_PASS, Employee.class)
                     .setParameter(JpaConst.JPQL_PARM_CODE, code)
+                    .setParameter(JpaConst.JPQL_PARM_PASSWORD, pass)
                     .getSingleResult();
         } catch (NoResultException ex) {
 
