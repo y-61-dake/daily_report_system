@@ -36,7 +36,7 @@
                     <td><fmt:formatDate value="${createDay}" pattern="yy-MM-dd HH:mm:ss" /></td>
                 </tr>
                 <tr>
-                    <th>登録日時</th>
+                    <th>更新日時</th>
                     <fmt:parseDate value="${employee.updatedAt}" pattern="yyyy-MM-dd'T'HH:mm:ss" var="updateDay" type="date" />
                     <td><fmt:formatDate value="${updateDay}" pattern="yy-MM-dd HH:mm:ss" /></td>
                 </tr>

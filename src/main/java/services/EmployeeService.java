@@ -185,6 +185,9 @@ public class EmployeeService extends ServiceBase {
 
         // 論理削除フラグをたてる
         savedEmp.setDeleteFlag(JpaConst.EMP_DEL_TRUE);
+
+        // 更新処理を行う
+        update(savedEmp);
     }
 
     /**
