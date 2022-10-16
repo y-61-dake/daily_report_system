@@ -7,7 +7,6 @@ import models.Report;
 
 /**
  * 日報データのDTOモデル⇔Viewモデルの変換を行うクラス
- * @author y-61-
  *
  */
 public class ReportConverter {
