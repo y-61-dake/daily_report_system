@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page import="constants.ForwardConst" %>
 
 <c:set var="actTop" value="${ForwardConst.ACT_TOP.getValue()}"/>
 <c:set var="actEmp" value="${ForwardConst.ACT_EMP.getValue()}"/>
-<c:set var="actRmp" value="${ForwardConst.ACT_RMP.getValue()}"/>
+<c:set var="actRep" value="${ForwardConst.ACT_REP.getValue()}"/>
 
 <c:set var="commShow" value="${ForwardConst.CMD_SHOW.getValue()}"/>
 <c:set var="commIdx" value="${ForwardConst.CMD_INDEX.getValue()}"/>
@@ -47,7 +48,7 @@
                         <c:out value="${i}" />&nbsp;
                     </c:when>
                     <c:otherwise>
-                        <<a href="<c:url value='?action=${actEmp}&command=${commIdx}&page=${i}' />"><c:out value="${i}" /></a>&nbsp;
+                        <a href="<c:url value='?action=${actTop}&command=${commIdx}&page=${i}' />"><c:out value="${i}" /></a>&nbsp;
                     </c:otherwise>
                 </c:choose>
             </c:forEach>

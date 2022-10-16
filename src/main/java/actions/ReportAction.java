@@ -205,6 +205,11 @@ public class ReportAction extends ActionBase {
             ReportView rv = service.findOne(toNumber(getRequestParam(AttributeConst.REP_ID)));
 
             // 入力された日報内容を設定する
+            rv.setReportDate(toLocalDate(getRequestParam(AttributeConst.REP_DATE)));
+            rv.setTitle(getRequestParam(AttributeConst.REP_TITLE));
+            rv.setContent(getRequestParam(AttributeConst.REP_CONTENT));
+
+            // 日報データを更新する
             List<String> errors = service.update(rv);
 
             if (errors.size() > 0) {
